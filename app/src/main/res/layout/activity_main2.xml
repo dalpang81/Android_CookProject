@@ -1,0 +1,178 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="검색어를 입력하세요"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="검색"
+        android:layout_below="@id/searchEditText"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:onClick="onSearchButtonClick"/>
+
+    <!-- 검색 기록을 표시할 ListView -->
+    <ListView
+        android:id="@+id/searchHistoryListView"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_below="@id/searchButton"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/cook2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchButton"
+        android:orientation="horizontal"
+        android:visibility="gone">
+        <!-- 이미지 버튼 1 -->
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:background="@drawable/kimchi" />
+
+        <!-- 구분선 -->
+        <TextView
+            android:id="@+id/titleTextView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="60dp"
+            android:text="김치볶음밥 정말 쉽고 \n맛있게 만드는 방법!"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cook1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchButton"
+        android:orientation="horizontal"
+        android:visibility="gone">
+        <!-- 이미지 버튼 1 -->
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:background="@drawable/pork" />
+
+        <!-- 구분선 -->
+        <TextView
+            android:id="@+id/titleTextView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="60dp"
+            android:text="집에서 기름 튈 걱정없이 삼겹살 맛있게 굽는 방법 \n삼겹살 땡밥"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cook3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchButton"
+        android:orientation="horizontal"
+        android:visibility="gone">
+        <!-- 이미지 버튼 1 -->
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:background="@drawable/jajang" />
+
+        <!-- 구분선 -->
+        <TextView
+            android:id="@+id/titleTextView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="60dp"
+            android:text="짜장라면으로 배터지게 만드는 '라면 볶음밥'"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+    </LinearLayout>
+
+    <!-- 하단 메뉴 바 -->
+    <LinearLayout
+        android:id="@+id/bottomMenuBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/gray"
+        android:layout_alignParentBottom="true">
+
+        <!-- 메뉴 아이템 1 -->
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="70dp"
+            android:src="@drawable/home2"
+            android:background="@android:color/transparent" />
+
+        <!-- 메뉴 아이템 2 -->
+        <ImageButton
+            android:id="@+id/searchButton2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="70dp"
+            android:src="@drawable/search"
+            android:background="@android:color/transparent" />
+
+        <!-- 메뉴 아이템 3 -->
+        <ImageButton
+            android:id="@+id/moreButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="70dp"
+            android:src="@drawable/more"
+            android:background="@android:color/transparent" />
+
+    </LinearLayout>
+
+</RelativeLayout>

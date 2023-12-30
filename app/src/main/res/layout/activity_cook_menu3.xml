@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 유튜브 영상을 표시하는 부분 -->
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtubePlayerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="#000"
+        app:autoPlay="false"
+        app:videoId="ldORvgyISsU" />
+
+    <!-- TextView -->
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="짜장라면으로 배터지게 만드는 '라면 볶음밥'"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_below="@id/youtubePlayerView"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp" />
+
+    <!-- 체크박스 6개를 나타내는 부분 -->
+
+    <GridLayout
+        android:id="@+id/checkboxGridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleTextView"
+        android:layout_marginTop="16dp"
+        android:columnCount="2"
+        android:rowOrderPreserved="false"
+        android:useDefaultMargins="true"
+        android:alignmentMode="alignBounds"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:visibility="visible">
+
+        <CheckBox
+            android:id="@+id/checkbox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="짜파게티 사발면 1개"
+            android:layout_rowSpan="1"
+            android:layout_marginLeft="25dp"/>
+
+        <CheckBox
+            android:id="@+id/checkbox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="양파 반개"
+            android:layout_rowSpan="1" />
+
+        <CheckBox
+            android:id="@+id/checkbox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="밥 한공기"
+            android:layout_rowSpan="1" />
+
+        <CheckBox
+            android:id="@+id/checkbox4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="계란"
+            android:layout_rowSpan="1"
+            android:layout_marginLeft="80dp"/>
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/receiptView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/titleTextView"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/receiptText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="먼저 봉지 안에 짜파게티 사발면을 넣어 부숴준다."
+            android:textSize="20sp"
+            android:layout_marginTop="70dp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <!-- 버튼 1 -->
+
+    <ImageButton
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼 1"
+        android:src="@drawable/left"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="570dp"
+        android:layout_marginStart="16dp"/>
+
+    <!-- 버튼 2 -->
+
+    <ImageButton
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/right"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="570dp"
+        android:layout_marginEnd="16dp"
+        android:text="버튼 2" />
+
+</RelativeLayout>

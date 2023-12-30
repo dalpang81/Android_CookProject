@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/profileView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="30dp"
+        >
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/jangs" />
+
+        <!-- 아래에 제목이 들어갈 텍스트뷰 -->
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profileView"
+            android:text="장원영           가입일: 2023/12/18"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp" />
+
+    </LinearLayout>
+    <!-- 이미지 뷰 -->
+    <LinearLayout
+        android:id="@+id/buttonView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/profileView"
+        android:gravity="center">
+
+        <!-- 버튼 1 -->
+        <ImageButton
+            android:id="@+id/button1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/time" />
+
+        <!-- 버튼 2 -->
+        <ImageButton
+            android:id="@+id/button2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/button1"
+            android:src="@drawable/qna"
+            android:layout_marginRight="20dp"
+            android:background="@android:color/transparent"/>
+
+        <!-- 버튼 3 -->
+        <ImageButton
+            android:id="@+id/button3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/button2"
+            android:src="@drawable/star"
+            android:layout_marginRight="20dp"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/buttonView"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="최근 본 레시피"
+            android:layout_marginRight="60dp"
+            android:textSize="18sp"
+            android:layout_below="@id/button1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QnA"
+            android:textSize="18sp"
+            android:layout_below="@id/button2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="스크랩"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="20dp"
+            android:textSize="18sp"
+            android:layout_below="@id/button3" />
+
+    </LinearLayout>
+
+    <!-- 하단 메뉴 바 -->
+    <LinearLayout
+        android:id="@+id/bottomMenuBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/gray"
+        android:layout_alignParentBottom="true">
+
+        <!-- 메뉴 아이템 1 -->
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="70dp"
+            android:src="@drawable/home2"
+            android:background="@android:color/transparent" />
+
+        <!-- 메뉴 아이템 2 -->
+        <ImageButton
+            android:id="@+id/searchButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="70dp"
+            android:src="@drawable/search"
+            android:background="@android:color/transparent" />
+
+        <!-- 메뉴 아이템 3 -->
+        <ImageButton
+            android:id="@+id/moreButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="70dp"
+            android:src="@drawable/more"
+            android:background="@android:color/transparent" />
+
+    </LinearLayout>
+
+</RelativeLayout>
